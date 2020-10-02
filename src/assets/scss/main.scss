@@ -1,0 +1,37 @@
+.v-main {
+  background-image: linear-gradient(to right, rgb(89 91 97 / 80%), rgb(67 70 80 / 80%)), url(/pexels-artem-beliaikin-1091778.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.avatar-container {
+  .avatar-photo {
+    position: relative;
+    left: 31px;
+  }
+
+  .btn-change-photo {
+    position: relative;
+    bottom: 48px;
+    left: 17px;
+
+    .v-icon {
+      font-size: 21px !important;
+    }
+  }
+
+  .btn-remove-photo {
+    position: relative;
+    bottom: 23px;
+    left: -36px;
+
+    .v-icon {
+      font-size: 24px !important;
+    }
+  }
+}
