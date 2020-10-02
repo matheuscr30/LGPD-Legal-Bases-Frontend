@@ -22,7 +22,7 @@ npm run lint
 ```
 
 ### Backend
-The Backend used for this application is in [GitHub](https://github.com/BiancaCristina/lgpd-legal-bases)
+The Backend used for this application is in [LGPD Legal Bases](https://github.com/BiancaCristina/lgpd-legal-bases)
 
 ## Authors
 
