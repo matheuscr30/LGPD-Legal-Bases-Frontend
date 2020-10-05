@@ -28,8 +28,8 @@ The Backend used for this application is in [LGPD Legal Bases](https://github.co
 
 ## Authors
 
-* **Bianca Cristina da Silva** - *creator* - [GitHub](https://github.com/BiancaCristina) ✌
-* **Matheus Cunha Reis** - *creator* - [GitHub](https://github.com/matheuscr30) ✌
+* **Bianca Cristina da Silva** - [GitHub](https://github.com/BiancaCristina)
+* **Matheus Cunha Reis** - [GitHub](https://github.com/matheuscr30) ✌
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
