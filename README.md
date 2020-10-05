@@ -29,6 +29,7 @@ The Backend used for this application is in [LGPD Legal Bases](https://github.co
 ## Authors
 
 * **Bianca Cristina da Silva** - [GitHub](https://github.com/BiancaCristina)
+* **Gustavo Nunes** - [GitHub](https://github.com/nunesg)
 * **Matheus Cunha Reis** - [GitHub](https://github.com/matheuscr30) ✌
 
 ## License
