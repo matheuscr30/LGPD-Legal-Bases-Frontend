@@ -78,7 +78,9 @@
                     </v-icon>
                   </template>
                   <span>
-                    O dado será usado exclusivamente para base de dados de cadastro
+                    O email será usado para finalidade de cadastro/login e envio
+                    de emails exclusivamente relacionado a pedidos e não será
+                    compartilhado ou usado para outros fins
                   </span>
                 </v-tooltip>
               </v-col>
@@ -137,10 +139,9 @@
                   </v-icon>
                 </template>
                 <span>
-                  It was popularised in the 1960s with the release of Letraset
-                  sheets containing Lorem Ipsum passages, and more recently with
-                  desktop publishing software like Aldus PageMaker including
-                  versions of Lorem Ipsum.
+                  A senha será usada exclusivamente para finalidade de
+                  cadastro/login e não será compartilhada ou usada para outros
+                  fins
                 </span>
               </v-tooltip>
             </v-col>
@@ -170,10 +171,9 @@
                     </v-icon>
                   </template>
                   <span>
-                    It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum.
+                    O nome será usado exclusivamente para deixar a interação
+                    entre sistema e usuário mais amigável e não será
+                    compartilhado ou usado para outros fins
                   </span>
                 </v-tooltip>
               </v-col>
@@ -201,10 +201,9 @@
                     </v-icon>
                   </template>
                   <span>
-                    It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum.
+                    O CPF será usado exclusivamente para a emissão de notas
+                    fiscais no nome do usuário e para o envio de produtos e não
+                    será compartilhado ou usado para outros fins
                   </span>
                 </v-tooltip>
               </v-col>
@@ -225,10 +224,9 @@
                     </v-icon>
                   </template>
                   <span>
-                    It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum.
+                    O endereço será usado exclusivamente para o envio dos
+                    produtos e da nota fiscal e não será compartilhado ou usado
+                    para outros fins
                   </span>
                 </v-tooltip>
               </v-col>
@@ -276,6 +274,7 @@
             <v-col cols="4" class="pl-3">
               <v-text-field
                 v-model="validation.models.addressNumber"
+                :rules="validation.rules.addressNumber"
                 tabindex="7"
                 type="number"
                 min="1"
@@ -369,9 +368,11 @@ export default {
               /^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(v) || "CPF tem que ser válido"
           ],
           cep: [
+            v => !!v || "CEP é obrigatório",
             v =>
               !v || /^\d{2}\.\d{3}-\d{3}$/.test(v) || "CEP tem que ser válido"
-          ]
+          ],
+          addressNumber: [v => !!v || "Número é obrigatório"]
         },
         auxiliary: {
           errorAddress: [],
@@ -454,7 +455,9 @@ export default {
           address: this.validation.models.address,
           number: this.validation.models.addressNumber,
           neighbourhood: this.validation.models.neighbourhood,
-          complement: this.validation.models.additionalAddress,
+          complement: this.validation.models.additionalAddress
+            ? this.validation.models.additionalAddress
+            : "no-complement",
           city: this.validation.models.city,
           state: this.validation.models.state,
           cep: this.cleanMask(this.validation.models.cep)
