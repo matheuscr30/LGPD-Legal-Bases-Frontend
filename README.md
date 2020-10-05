@@ -2,6 +2,8 @@
 The frontend for an example of application of how to accomplish LGPD laws
 
 ## Project setup
+First of all, it's necessary to change the variable VUE_APP_ROOT_API (.env) to the right url of your Backend
+
 ```
 npm install
 ```
